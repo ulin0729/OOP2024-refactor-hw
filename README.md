@@ -27,7 +27,7 @@ When using structure, everything is accessible to any part of the code. What if 
 
 Now, everything is inside a class and the main function looks much better then ever.
 
-- v7: Overly complicated but fun refactor using STLs. (C++23 only)
+### v7: Overly complicated but fun refactor using STLs. (C++23 only)
 
 **This is just for fun.** I surveyed the features of modern C++ and found out that there are lots of things that I never heard of. Then, I use `cartesian_product_view()` and `iota_view{}` to eliminate the nested for loops which are intended to generate (i,j,k) tuples only. Ultimately turn the cyclomatic compleity number from 16 to 6 without using "&&, ||" hacks.
 
