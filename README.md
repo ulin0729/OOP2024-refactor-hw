@@ -1,4 +1,8 @@
 # OOP 2024 Refactor Homework
+## Problem
+Judge Girl 10288. Rubik's cube
+
+https://judgegirl.csie.org/problem/216/10288
 
 ## Versions
 ### v1: Original code on judge girl
