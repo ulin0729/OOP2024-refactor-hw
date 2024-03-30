@@ -10,28 +10,24 @@ public:
         sz = n;
         arr.resize(n, vector<vector<int> >(n, vector<int>(n)));
         a = ranges::iota_view{0,n};
-        for (auto const& t : ranges::cartesian_product_view(a,a,a)) {
-            const auto& [i,j,k] = t;
+        for (auto const& [i,j,k] : ranges::cartesian_product_view(a,a,a)) {
             arr[i][j][k] = i*n*n + j*n + k;
         }
     }
     ~Cube() {}
 
     void output_cube() {
-        for (auto const& t : ranges::cartesian_product_view(a,a,a)) {
-            const auto& [i,j,k] = t;
+        for (auto const& [i,j,k] : ranges::cartesian_product_view(a,a,a)) {
             cout << arr[i][j][k] << " \n"[k==sz-1];
         }
     }
 
     void rotate(int layer, int type) {
         vector<vector<int> > temp(sz, vector<int>(sz));
-        for (auto const& t : ranges::cartesian_product_view(a,a)) {
-            const auto& [i,j] = t;
+        for (auto const& [i,j] : ranges::cartesian_product_view(a,a)) {
             temp[j][sz-1-i] = get_node(type, i, j, layer);
         }
-        for (auto const& t : ranges::cartesian_product_view(a,a)) {
-            const auto& [i,j] = t;
+        for (auto const& [i,j] : ranges::cartesian_product_view(a,a)) {
             get_node(type, i, j, layer) = temp[i][j];
         }
     }
