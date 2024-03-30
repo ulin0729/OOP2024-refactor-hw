@@ -15,7 +15,7 @@ Put the initialization, output and rotation parts inside seperate functions. Thi
 Make a structure called "Cube" which put the size and the array itself together. This way, we can know where to find the size of the cube instantly. And, when passing arguments to the functions, we can simply pass one argument instead of several ones. (I also dynamically allocate the memories for array to better support variant sizes of cubes.)
 
 ### v4: Refactor with vectors (Convert to C++)
-In C++, we have handy STL called "vector" that is basically a dynamic array. Also, vector can handle the construction and destruction on its own. So, I changed all arrays in previous vertion to vectors.
+In C++, we have a handy STL called "vector" that is basically a dynamic array. Also, vector can handle the construction and destruction on its own. So, I changed all arrays in previous vertion to vectors.
 
 ### v5: Merge two rotation functions using reference functions
 The rotation functions modifies different part of the array, which is hard to merge the logic in C.
